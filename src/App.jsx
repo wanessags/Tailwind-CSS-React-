@@ -1,10 +1,24 @@
+import Button from "./components/Button";
+
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <h1 className="text-3xl font-bold text-gray-900">React + Tailwind</h1>
+    <main className="min-h-screen bg-gray-100 p-8">
+      <div className="mx-auto max-w-4xl">
+        <h1 className="mb-2 text-3xl font-bold text-gray-900">Button System</h1>
 
-      <p className="mt-2 text-gray-600">Projeto funcionando!</p>
-    </div>
+        <p className="mb-8 text-gray-600">
+          Sistema de botões reutilizáveis utilizando React e Tailwind CSS.
+        </p>
+
+        <div className="flex flex-wrap gap-4">
+          <Button>Salvar</Button>
+
+          <Button variant="secondary">Cancelar</Button>
+
+          <Button variant="danger">Excluir</Button>
+        </div>
+      </div>
+    </main>
   );
 }
 
