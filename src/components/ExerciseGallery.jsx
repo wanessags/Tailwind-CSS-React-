@@ -12,6 +12,9 @@ import PricingCard from "./PricingCard.jsx";
 import Alert from "./Alert.jsx";
 import Navbar from "./Navbar.jsx";
 
+const ellieImage =
+  "https://store.playstation.com/store/api/chihiro/00_09_000/container/GB/en/19/EP9000-CUSA10249_00-AV00000000000002/1553559935000/image";
+
 const exercises = [
   { id: 1, name: "Button System" },
   { id: 2, name: "Badge + Avatar" },
@@ -47,11 +50,7 @@ function ExerciseContent({ selected }) {
           </div>
 
           <div className="flex items-center gap-4">
-            <Avatar
-              src="https://i.pravatar.cc/150?img=12"
-              alt="Foto de perfil"
-              size="lg"
-            />
+            <Avatar src={ellieImage} alt="Ellie de The Last of Us" size="lg" />
 
             <div>
               <h3 className="font-semibold">Wanessa</h3>
@@ -67,7 +66,7 @@ function ExerciseContent({ selected }) {
           <ProfileCard
             name="Wanessa"
             role="Desenvolvedora"
-            image="https://i.pravatar.cc/150?img=12"
+            image={ellieImage}
             status="Ativo"
             description="Estudante de tecnologia, desenvolvendo interfaces com React e Tailwind CSS."
           />
