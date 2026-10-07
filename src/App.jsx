@@ -1,41 +1,35 @@
-import KpiCard from "./components/KpiCard";
+import Alert from "./components/Alert";
 
 function App() {
   return (
-    <main className="min-h-screen bg-gray-100 p-8">
-      <div className="mx-auto max-w-6xl">
+    <main className="min-h-screen bg-gray-100 p-6 md:p-10">
+      <div className="mx-auto max-w-4xl">
         <header className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">KPI Dashboard</h1>
+          <h1 className="text-3xl font-bold text-gray-900">
+            Alert / Notification
+          </h1>
 
           <p className="mt-2 text-gray-600">
-            Indicadores principais utilizando componentes reutilizáveis.
+            Componentes de alerta reutilizáveis com React e Tailwind CSS.
           </p>
         </header>
 
-        <section className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <KpiCard
-            title="Receita total"
-            value="R$ 24.580"
-            trend="+12,5%"
-            trendType="positive"
-            description="Comparado ao mês anterior"
-          />
+        <section className="space-y-5">
+          <Alert title="Operação realizada com sucesso" variant="success">
+            Seus dados foram salvos corretamente.
+          </Alert>
 
-          <KpiCard
-            title="Novos clientes"
-            value="1.248"
-            trend="+8,2%"
-            trendType="positive"
-            description="Novos clientes neste mês"
-          />
+          <Alert title="Erro ao processar solicitação" variant="error">
+            Não foi possível concluir a operação. Tente novamente mais tarde.
+          </Alert>
 
-          <KpiCard
-            title="Taxa de conversão"
-            value="4,8%"
-            trend="-2,1%"
-            trendType="negative"
-            description="Comparado ao mês anterior"
-          />
+          <Alert title="Atenção" variant="warning">
+            Algumas informações precisam ser revisadas antes de continuar.
+          </Alert>
+
+          <Alert title="Informação importante" variant="info">
+            Uma nova atualização está disponível para o sistema.
+          </Alert>
         </section>
       </div>
     </main>
