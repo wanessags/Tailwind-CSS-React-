@@ -120,4 +120,3 @@ Os exercícios da primeira parte da atividade devem ser documentados no arquivo 
 ## Repositório
 
 https://github.com/wanessags/Tailwind-CSS-React-
-s
