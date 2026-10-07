@@ -1,35 +1,34 @@
-import Badge from "./components/Badge";
-import Avatar from "./components/Avatar";
+import ProfileCard from "./components/ProfileCard";
 
 function App() {
   return (
     <main className="min-h-screen bg-gray-100 p-8">
-      <div className="mx-auto max-w-4xl">
-        <h1 className="mb-2 text-3xl font-bold text-gray-900">
-          Badge + Avatar
-        </h1>
+      <div className="mx-auto max-w-5xl">
+        <header className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900">Profile Card</h1>
 
-        <p className="mb-8 text-gray-600">
-          Componentes reutilizáveis utilizando React e Tailwind CSS.
-        </p>
+          <p className="mt-2 text-gray-600">
+            Card de perfil reutilizável com React e Tailwind CSS.
+          </p>
+        </header>
 
-        <div className="rounded-xl bg-white p-6 shadow-sm">
-          <div className="flex items-center gap-4">
-            <Avatar
-              src="https://i.pravatar.cc/150?img=12"
-              alt="Wanessa"
-              size="lg"
-            />
+        <section className="flex flex-col gap-6 md:flex-row">
+          <ProfileCard
+            name="Wanessa"
+            role="Desenvolvedora"
+            image="https://i.pravatar.cc/150?img=12"
+            status="Ativo"
+            description="Estudante de Tecnologia e desenvolvimento de aplicações utilizando React, Tailwind CSS e outras tecnologias."
+          />
 
-            <div>
-              <h2 className="text-lg font-semibold text-gray-900">Wanessa</h2>
-
-              <p className="text-sm text-gray-500">Desenvolvedora</p>
-            </div>
-
-            <Badge variant="success">Ativo</Badge>
-          </div>
-        </div>
+          <ProfileCard
+            name="Ana Souza"
+            role="Designer"
+            image="https://i.pravatar.cc/150?img=32"
+            status="Ativo"
+            description="Profissional de design focada na criação de interfaces modernas, acessíveis e intuitivas."
+          />
+        </section>
       </div>
     </main>
   );
