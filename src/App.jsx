@@ -1,32 +1,40 @@
-import ProfileCard from "./components/ProfileCard";
+import ProductCard from "./components/ProductCard";
 
 function App() {
   return (
     <main className="min-h-screen bg-gray-100 p-8">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl">
         <header className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Profile Card</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Product Card</h1>
 
           <p className="mt-2 text-gray-600">
-            Card de perfil reutilizável com React e Tailwind CSS.
+            Cards de produtos reutilizáveis com React e Tailwind CSS.
           </p>
         </header>
 
-        <section className="flex flex-col gap-6 md:flex-row">
-          <ProfileCard
-            name="Wanessa"
-            role="Desenvolvedora"
-            image="https://i.pravatar.cc/150?img=12"
-            status="Ativo"
-            description="Estudante de Tecnologia e desenvolvimento de aplicações utilizando React, Tailwind CSS e outras tecnologias."
+        <section className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ProductCard
+            name="Fone Bluetooth"
+            description="Fone sem fio com conexão Bluetooth e bateria de longa duração."
+            price="R$ 199,90"
+            image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+            status="Disponível"
           />
 
-          <ProfileCard
-            name="Ana Souza"
-            role="Designer"
-            image="https://i.pravatar.cc/150?img=32"
-            status="Ativo"
-            description="Profissional de design focada na criação de interfaces modernas, acessíveis e intuitivas."
+          <ProductCard
+            name="Smartwatch"
+            description="Relógio inteligente com monitoramento de atividades e notificações."
+            price="R$ 349,90"
+            image="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+            status="Disponível"
+          />
+
+          <ProductCard
+            name="Câmera Fotográfica"
+            description="Câmera compacta para registrar seus melhores momentos com qualidade."
+            price="R$ 899,90"
+            image="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80"
+            status="Novo"
           />
         </section>
       </div>
